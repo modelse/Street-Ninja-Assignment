@@ -5,85 +5,84 @@ $(document).ready(function (){
     $('#player2').hide();
 
     // Hover to view Backgrounds
-    $('#beach').hover(function(){
-        $('#wrapper').css('background-image' , 'url(beach.jpg)');
+    $('button').hover(function(){
+        var arena=$(this).attr("id")
+        switch(arena){
+            case "beach":
+            $('#wrapper').css('background-image' , 'url(beach.jpg)');
+            break
+            case "dojo":
+            $('#wrapper').css('background-image' , 'url(dojo.jpg)');
+            break
+            case "earth":
+            $('#wrapper').css('background-image' , 'url(earth.jpg)');
+            break
+            case "forest":
+            $('#wrapper').css('background-image' , 'url(forest.jpg)');
+            break
+            case "snow":
+            $('#wrapper').css('background-image' , 'url(snow.jpg)');
+            break
+            case "matrix":
+            $('#wrapper').css('background-image' , 'url(matrix.jpg)');
+        }
     })
-    $('#dojo').hover(function(){
-        $('#wrapper').css('background-image' , 'url(dojo.jpg)');
-    })
-    $('#earth').hover(function(){
-        $('#wrapper').css('background-image' , 'url(earth.jpg)');
-    })
-    $('#forest').hover(function(){
-        $('#wrapper').css('background-image' , 'url(forest.jpg)');
-    })
-    $('#snow').hover(function(){
-        $('#wrapper').css('background-image' , 'url(snow.jpg)');
-    })
-    $('#matrix').hover(function(){
-        $('#wrapper').css('background-image' , 'url(matrix.jpg)');
-    })
+
 
     // Select Permanent Background
-    $('#beach').click(function(){
-        $('#wrapper').css('background-image' , 'url(beach.jpg)');
-        $('#box1').hide();
-        $('#box2').show();
-        $('#player1').show();
-        $('#player2').show();
-    })
-    $('#dojo').click(function(){
-        $('#wrapper').css('background-image' , 'url(dojo.jpg)');
-        $('#box1').hide();
-        $('#box2').show();
-        $('#player1').show();
-        $('#player2').show();
-    })
-    $('#earth').click(function(){
-        $('#wrapper').css('background-image' , 'url(earth.jpg)');
-        $('#box1').hide();
-        $('#box2').show();
-        $('#player1').show();
-        $('#player2').show();
-    })
-    $('#forest').click(function(){
-        $('#wrapper').css('background-image' , 'url(forest.jpg)');
-        $('#box1').hide();
-        $('#box2').show();
-        $('#player1').show();
-        $('#player2').show();
-    })
-    $('#snow').click(function(){
-        $('#wrapper').css('background-image' , 'url(snow.jpg)');
-        $('#box1').hide();
-        $('#box2').show();
-        $('#player1').show();
-        $('#player2').show();
-    })
-    $('#matrix').click(function(){
-        $('#wrapper').css('background-image' , 'url(matrix.jpg)');
+    $('button').click(function(){
+        var arena=$(this).attr("id")
+        switch (arena){
+            case "beach":
+            $('#wrapper').css('background-image' , 'url(beach.jpg)');
+            break
+            case "dojo":
+            $('#wrapper').css('background-image' , 'url(dojo.jpg)');
+            break
+            case "earth":
+            $('#wrapper').css('background-image' , 'url(earth.jpg)');
+            break
+            case "forest":
+            $('#wrapper').css('background-image' , 'url(forest.jpg)');
+            break
+            case "snow":
+            $('#wrapper').css('background-image' , 'url(snow.jpg)');
+            break
+            case "matrix":
+            $('#wrapper').css('background-image' , 'url(matrix.jpg)');
+            break
+        }
         $('#box1').hide();
         $('#box2').show();
         $('#player1').show();
         $('#player2').show();
     })
 
+
     // Character Select Number 1
-    $('#squirtle').click(function(){
+    $('option').click(function(){
+        var character=$(this).attr("id")
+        // alert(character)
+        switch (character){
+        case "squirtle":
         $("#player1").attr( "src" ,"Squirtle.PNG")
-    })
-    $('#flareon').click(function(){
+        break
+        case "flareon":
         $("#player1").attr( "src" ,"flareon.png")
-    })
-    $('#ponyta').click(function(){
+        break
+        case "ponyta":
         $("#player1").attr( "src" ,"Ponyta.png")
-    })
-    $('#pikachu').click(function(){
+        break
+        case "pikachu":
         $("#player1").attr( "src" ,"Pickachu.png")
-    })
-    $('#pichu').click(function(){
+        break
+        case "pichu":
         $("#player1").attr( "src" ,"Pichu.png")
-    })
+
+        }
+        })
+
+//
 
     // Character Select Number 2
     $('#squirtle2').click(function(){
